@@ -1,0 +1,11 @@
+:root {
+    --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+    --phishing-warning-text-bg: rgba(39, 38, 44, 0.4);
+    --navbar-color: #27262c;
+    --subtitle-text-color: #b8add2;
+    --recent-update-color: #ffb237;
+    --navbar-extra-label-color: #353547;
+    --button-bg-color: #1fc7d4;
+    --title-text-color: #9a6aff;
+    --graphic-theme-color: #ed4b9e;
+}
