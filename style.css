@@ -4,7 +4,22 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Kanit, sans-serif;;
+    font-family: Kanit, sans-serif;
+}
+body {
+    overflow-y: scroll;
+}
+/* Elementi scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--normal-text-color);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--normal-text-color);
+    border-radius: 10px;
 }
 
 .flex {
@@ -83,4 +98,327 @@
 }
 .phishing-second-container svg:hover {
     color: var(--phising-remember-text-color);
+}
+
+/* Inizio container NavBar */
+
+.navbar-container-general {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    background-color: var(--navbar-color);
+    color: var(--normal-text-color);
+    height: 56px;
+    border-bottom: 1px solid var(--navbar-border-color);
+}
+
+/* Container navbar parte sinistra */
+.navbar-left-side {
+    align-items: center;
+    font-weight: 500;
+    height: 100%;
+    gap: 5px;
+}
+
+.navbar-left-side .logo svg {
+    width: 161px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.navbar-left-side .dots-downscroll svg {
+    fill: var(--normal-text-color);
+}
+
+/* Inizio contenitore trade */
+.trade-general {
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 0px 16px;
+    height: 100%;
+    width: 100%;
+}
+.trade-general:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+.trade-general:hover .trade-downscroll {
+    visibility: visible;
+}
+.trade-downscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: 56px;
+    left: -1px;
+    border-radius: 16px;
+    width: 280px;
+    fill: var(--normal-text-color);
+    padding-top: 4px;
+}
+.trade-downscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+.trade-downscroll .item:nth-child(4),
+.trade-downscroll .item:nth-child(5) {
+    align-items: center;
+    justify-content: space-between;
+}
+.trade-downscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+/* Inizio contenitore Earn */
+.earn-general {
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 0px 16px;
+    height: 100%;
+    width: 100%;
+}
+.earn-general:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+.earn-general:hover .earn-downscroll {
+    visibility: visible;
+}
+.earn-downscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: 56px;
+    left: -1px;
+    border-radius: 16px;
+    width: 280px;
+    padding-top: 4px;
+}
+.earn-downscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+.earn-downscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+/* Inizio contenitore Win */
+.win-general {
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 0px 16px;
+    height: 100%;
+    width: 100%;
+}
+.win-general:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+.win-general:hover .win-downscroll {
+    visibility: visible;
+}
+.win-downscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: 56px;
+    left: -1px;
+    border-radius: 16px;
+    width: 280px;
+    padding-top: 4px;
+}
+.win-downscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+
+.win-downscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+/* Inizio contenitore NFT */
+.nft-general {
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 0px 16px;
+    height: 100%;
+    width: 100%;
+}
+.nft-general:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+.nft-general:hover .nft-downscroll {
+    visibility: visible;
+}
+.nft-downscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: 56px;
+    left: -1px;
+    border-radius: 16px;
+    width: 280px;
+    padding-top: 4px;
+}
+.nft-downscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+
+.nft-downscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+/* Inizio contenitore dots */
+.dots-general {
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 0px 16px;
+    height: 100%;
+    width: 100%;
+    fill: var(--normal-text-color);
+}
+.dots-general:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+.dots-general:hover .dots-downscroll {
+    visibility: visible;
+}
+.dots-downscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: 56px;
+    left: -1px;
+    border-radius: 16px;
+    width: 280px;
+    padding-top: 4px;
+}
+.dots-downscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+.dots-downscroll .item:nth-child(3),
+.dots-downscroll .item:nth-child(4) {
+    border-bottom: 1px solid var(--downscroll-bg-onhover);
+}
+
+.dots-downscroll .item:nth-child(5),
+.dots-downscroll .item:nth-child(6) {
+    align-items: center;
+    justify-content: space-between;
+}
+.dots-downscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+
+/* Container navbar parte destra */
+.navbar-right-side {
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-right-side .item {
+    cursor: pointer;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.navbar-right-side .svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.navbar-right-side .item:hover svg {
+    width: 28px;
+    height: 28px;
+}
+
+.navbar-right-side .item svg {
+    display: flex;
+    align-self: center;
+    transition: 0.3s ease 0s;
+    margin-right: 8px;
+}
+
+.language-item svg, .setting-item svg {
+    fill: var(--normal-text-color);
+    margin-left: 8px;
+}
+
+/* Inizio contenitore lingue */
+.language-item {
+    position: relative;
+    cursor: pointer;
+}
+.language-item:hover svg {
+    transition: 0.3s ease 0s;
+    opacity: 0.5;
+}
+
+.language-downscroll {
+    transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+    gap: 5px;
+    align-items: center;
+    overflow-y: scroll;
+    max-height: 363px;
+    width: max-content;
+    position: absolute;
+    padding: 16px;
+    color: white;
+    background-color: var(--navbar-color);
+}
+
+.bnb-smart-container {
+    align-items: center;
+    height: 32px;
+    padding-right: 8px;
+    border-radius: 16px;
+    background-color: var(--navbar-extra-label-color);
+    color: white;
+    fill: white;
+    cursor: pointer;
+    font-weight: 600;
+    gap: 6px;
+}
+.bnb-smart-container img {
+    width: 32px;
+    height: 32px;
+}
+
+.navbar-right-side button {
+    background-color: var(--button-bg-color);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 0px 16px;
+    height: 32px;
 }
