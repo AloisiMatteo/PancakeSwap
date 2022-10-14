@@ -164,21 +164,28 @@ body {
 .navbar-left-side .dots-downscroll svg {
     fill: var(--normal-text-color);
 }
+/* Separatore downscroll */
+.downscroll-separator {
+    position: absolute;
+    top: 6px;
+    width: 100%;
+    height: 100%;
+}
 
 /* Inizio contenitore trade */
 .trade-general {
-    align-items: center;
+    justify-content: center;
     position: relative;
     cursor: pointer;
     border-radius: 16px;
     padding: 0px 16px;
-    height: 100%;
+    height: 80%;
     width: 100%;
 }
 .trade-general:hover {
     background-color: var(--downscroll-bg-onhover);
 }
-.trade-general:hover .trade-downscroll {
+.downscroll-separator:hover + div {
     visibility: visible;
 }
 .trade-downscroll {
@@ -186,12 +193,15 @@ body {
     position: absolute;
     visibility: hidden;
     background-color: var(--navbar-color);
-    top: 56px;
+    top: 50.8px;
     left: -1px;
     border-radius: 16px;
     width: 280px;
     fill: var(--normal-text-color);
     padding-top: 4px;
+}
+.trade-downscroll:hover {
+    visibility: visible;
 }
 .trade-downscroll .item {
     display: flex;
@@ -210,18 +220,18 @@ body {
 
 /* Inizio contenitore Earn */
 .earn-general {
-    align-items: center;
+    justify-content: center;
     position: relative;
     cursor: pointer;
     border-radius: 16px;
     padding: 0px 16px;
-    height: 100%;
+    height: 80%;
     width: 100%;
 }
 .earn-general:hover {
     background-color: var(--downscroll-bg-onhover);
 }
-.earn-general:hover .earn-downscroll {
+.downscroll-separator:hover + div {
     visibility: visible;
 }
 .earn-downscroll {
@@ -229,11 +239,14 @@ body {
     position: absolute;
     visibility: hidden;
     background-color: var(--navbar-color);
-    top: 56px;
+    top: 50.8px;
     left: -1px;
     border-radius: 16px;
     width: 280px;
     padding-top: 4px;
+}
+.earn-downscroll:hover {
+    visibility: visible;
 }
 .earn-downscroll .item {
     display: flex;
@@ -247,18 +260,18 @@ body {
 
 /* Inizio contenitore Win */
 .win-general {
-    align-items: center;
+    justify-content: center;
     position: relative;
     cursor: pointer;
     border-radius: 16px;
     padding: 0px 16px;
-    height: 100%;
+    height: 80%;
     width: 100%;
 }
 .win-general:hover {
     background-color: var(--downscroll-bg-onhover);
 }
-.win-general:hover .win-downscroll {
+.downscroll-separator:hover + div {
     visibility: visible;
 }
 .win-downscroll {
@@ -266,11 +279,14 @@ body {
     position: absolute;
     visibility: hidden;
     background-color: var(--navbar-color);
-    top: 56px;
+    top: 50.8px;
     left: -1px;
     border-radius: 16px;
     width: 280px;
     padding-top: 4px;
+}
+.win-downscroll:hover {
+    visibility: visible;
 }
 .win-downscroll .item {
     display: flex;
@@ -285,18 +301,18 @@ body {
 
 /* Inizio contenitore NFT */
 .nft-general {
-    align-items: center;
+    justify-content: center;
     position: relative;
     cursor: pointer;
     border-radius: 16px;
     padding: 0px 16px;
-    height: 100%;
+    height: 80%;
     width: 100%;
 }
 .nft-general:hover {
     background-color: var(--downscroll-bg-onhover);
 }
-.nft-general:hover .nft-downscroll {
+.downscroll-separator:hover + div {
     visibility: visible;
 }
 .nft-downscroll {
@@ -304,11 +320,14 @@ body {
     position: absolute;
     visibility: hidden;
     background-color: var(--navbar-color);
-    top: 56px;
+    top: 50.8px;
     left: -1px;
     border-radius: 16px;
     width: 280px;
     padding-top: 4px;
+}
+.nft-downscroll:hover {
+    visibility: visible;
 }
 .nft-downscroll .item {
     display: flex;
@@ -323,19 +342,19 @@ body {
 
 /* Inizio contenitore dots */
 .dots-general {
-    align-items: center;
+    justify-content: center;
     position: relative;
     cursor: pointer;
     border-radius: 16px;
     padding: 0px 16px;
-    height: 100%;
+    height: 80%;
     width: 100%;
     fill: var(--normal-text-color);
 }
 .dots-general:hover {
     background-color: var(--downscroll-bg-onhover);
 }
-.dots-general:hover .dots-downscroll {
+.downscroll-separator:hover + div {
     visibility: visible;
 }
 .dots-downscroll {
@@ -343,11 +362,14 @@ body {
     position: absolute;
     visibility: hidden;
     background-color: var(--navbar-color);
-    top: 56px;
+    top: 50.8px;
     left: -1px;
     border-radius: 16px;
     width: 280px;
     padding-top: 4px;
+}
+.dots-downscroll:hover {
+    visibility: visible;
 }
 .dots-downscroll .item {
     display: flex;
