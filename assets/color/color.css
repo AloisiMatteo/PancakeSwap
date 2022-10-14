@@ -1,5 +1,6 @@
 :root {
     --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+    --adapted-phishing-color: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)), linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
     --phishing-warning-text-bg: rgba(39, 38, 44, 0.4);
     --phising-remember-text-color: rgb(189, 194, 196);
     --navbar-color: #27262c;
