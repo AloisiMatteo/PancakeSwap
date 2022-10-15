@@ -15,7 +15,7 @@ body {
 .offusca-schermo {
     position: fixed;
     transition: 0.3s ease 0s;
-    display: none;
+    visibility: hidden;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -23,11 +23,11 @@ body {
     z-index: 10;
 }
 .offusca-schermo-on {
-    display: block;
+    visibility: visible;
     opacity: 0.6;
 }
 .offusca-schermo-off {
-    display: none;
+    visibility: hidden;
     opacity: 0;
 }
 /* Elementi scrollbar */
@@ -49,6 +49,11 @@ body {
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+/* Inizio contenitore phishing e navbar */
+.phishing-navbar-contanier {
+    z-index: 9;
 }
 
 /* Inizio container PHISHING */
@@ -453,12 +458,14 @@ overflow: hidden;
 }
 
 .language-item:hover .language-downscroll {
+    opacity: 1;
     visibility: visible;
 }
 
 .language-downscroll {
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out 0s;
+    opacity: 0;
+    transition: 0.3s ease-in-out 0s;
     gap: 5px;
     align-items: center;
     left: -60px;
@@ -803,3 +810,6 @@ overflow: hidden;
         display: flex;
     }
 }
+
+
+/* Inizio contenitore opzioni della navbar */
