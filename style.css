@@ -453,8 +453,12 @@ overflow: hidden;
     cursor: pointer;
     height: 100%;
 }
-.language-item:hover svg {
+
+.language-item svg {
     transition: 0.3s ease 0s;
+    opacity: 1;
+}
+.language-item:hover svg {
     opacity: 0.5;
 }
 
@@ -492,9 +496,10 @@ overflow: hidden;
     justify-content: center;
     height: 100%;
     cursor: pointer;
+    transition: 0.3s ease 0s;
+    opacity: 1;
 }
 .setting-item:hover {
-    transition: 0.3s ease 0s;
     opacity: 0.4;
 }
 
@@ -578,6 +583,7 @@ overflow: hidden;
 /* Inizio bottone interno alla navbar */
 .navbar-right-side button {
     background-color: var(--button-bg-color);
+    transition: 0.3s ease 0s;
     cursor: pointer;
     color: white;
     justify-content: center;
@@ -587,9 +593,9 @@ overflow: hidden;
     border-radius: 16px;
     padding: 0px 16px;
     height: 32px;
+    opacity: 1;
 }
 .navbar-right-side button:hover {
-    transition: 0.3s ease 0s;
     opacity: 0.65;
 }
 .bottone-adattato {
