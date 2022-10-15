@@ -14,12 +14,21 @@ body {
 
 .offusca-schermo {
     position: fixed;
+    transition: 0.3s ease 0s;
     display: none;
     width: 100%;
     height: 100%;
     background-color: white;
-    opacity: 0.6;
+    opacity: 0;
     z-index: 10;
+}
+.offusca-schermo-on {
+    display: block;
+    opacity: 0.6;
+}
+.offusca-schermo-off {
+    display: none;
+    opacity: 0;
 }
 /* Elementi scrollbar */
 ::-webkit-scrollbar {
@@ -358,7 +367,7 @@ body {
     visibility: visible;
 }
 .dots-downscroll {
-    overflow: hidden;
+overflow: hidden;
     position: absolute;
     visibility: hidden;
     background-color: var(--navbar-color);
@@ -616,4 +625,181 @@ body {
         display: none;
     }
 
+}
+
+/* Inizio contenitore navbar adattata */
+.navbar-adattata-generale {
+    background-color: var(--navbar-color);
+    width: 100%;
+    color: var(--normal-text-color);
+    fill: var(--normal-text-color);
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 20;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    position: fixed;
+    bottom: 0px;
+    border-top: 1px solid var(--navbar-border-color);
+    display: none;
+}
+
+.trade-adattato-generale,
+.earn-adattato-generale,
+.win-adattato-generale,
+.nft-adattato-generale,
+.dots-adattato-generale {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    border-radius: 12px;
+    width: 57px;
+    height: 90%;
+    cursor: pointer;
+}
+.trade-adattato-generale:hover,
+.earn-adattato-generale:hover,
+.win-adattato-generale:hover,
+.nft-adattato-generale:hover,
+.dots-adattato-generale:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+.trade-adattato-generale:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+/* Separator upscroll per la navbar adattata */
+.upscroll-separator {
+    position: absolute;
+    top: -7px;
+    width: 100%;
+    height: 50px;
+}
+
+/* Inizio contenitore upscroll earn adattato */
+.upscroll-separator:hover + div {
+    visibility: visible;
+}
+.earn-adattato-upscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: -106px;
+    left: -151px;
+    border-radius: 16px;
+    width: 57vh;
+    padding-top: 4px;
+    font-size: 16px;
+}
+.earn-adattato-upscroll:hover {
+    visibility: visible;
+}
+.earn-adattato-upscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+.earn-adattato-upscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+/* Inizio contenitore upscroll win adattato */
+.win-adattato-upscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: -200px;
+    left: -240px;
+    border-radius: 16px;
+    width: 57vh;
+    padding-top: 4px;
+    font-size: 16px;
+}
+.win-adattato-upscroll:hover {
+    visibility: visible;
+}
+.win-adattato-upscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+
+.win-adattato-upscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+/* Inizio contenitore NFT adattato */
+.nft-adattato-upscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: -153px;
+    left: -332px;
+    border-radius: 16px;
+    width: 57vh;
+    padding-top: 4px;
+    font-size: 16px;
+}
+.nft-adattato-upscroll:hover {
+    visibility: visible;
+}
+.nft-adattato-upscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+
+.nft-adattato-upscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+
+/* Inizio contenitore dots adattato */
+.dots-adattato-upscroll {
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    background-color: var(--navbar-color);
+    top: -294px;
+    left: -447px;
+    border-radius: 16px;
+    width: 57vh;
+    padding-top: 4px;
+    font-size: 16px;
+}
+.dots-adattato-upscroll:hover {
+    visibility: visible;
+}
+.dots-adattato-upscroll .item {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    padding: 0px 16px;
+}
+.dots-adattato-upscroll .item:nth-child(3),
+.dots-adattato-upscroll .item:nth-child(4) {
+    border-bottom: 1px solid var(--downscroll-bg-onhover);
+}
+    
+.dots-adattato-upscroll .item:nth-child(5),
+.dots-adattato-upscroll .item:nth-child(6) {
+    align-items: center;
+    justify-content: space-between;
+}
+.dots-adattato-upscroll .item:hover {
+    background-color: var(--downscroll-bg-onhover);
+}
+    
+@media screen and (max-width: 600px){
+    .navbar-adattata-generale {
+        display: flex;
+    }
 }
