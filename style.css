@@ -49,7 +49,9 @@ body {
 }
 
 /* Inizio contenitore phishing e navbar */
-.phishing-navbar-contanier {
+.phishing-navbar-container {
+    position: fixed;
+    width: 100%;
     z-index: 9;
 }
 
@@ -1038,11 +1040,14 @@ overflow: hidden;
     .opzioni-normale-generale {
         min-height: 320px;
         bottom: 0px;
-        top: 100%;
+        top: 103%;
         left: auto;
         width: 100%;
     }
     .label-opzioni {
         background-color: var(--adapted-setting-label);
+    }
+    .healt-svg-scroll {
+        right: -220px;
     }
 }

@@ -59,6 +59,7 @@ function spostaFlagSetting (contenitore, check, flag, bordoFlag) {
 function settingPriority () {
     offuscaSchermo.classList.add("offusca-schermo-on");
     offuscaSchermo.addEventListener("click" , () => {
+        document.body.setAttribute("style" , "overflow-y: scroll");
         offuscaSchermo.classList.remove("offusca-schermo-on");
         contenitoreGeneraleSetting.classList.remove("opzioni-generale-on");
 
@@ -68,6 +69,7 @@ function settingPriority () {
     });
 }
 function settingClose () {
+    document.body.setAttribute("style" , "overflow-y: scroll");
     contenitoreGeneraleSetting.classList.remove("opzioni-generale-on");
     offuscaSchermo.classList.remove("offusca-schermo-on");
 
@@ -98,6 +100,8 @@ contenitoreBottoneTema.addEventListener("click" , () => {       //Sposta il flag
 });
 
 navbarSetting.addEventListener("click" , () => {    //Mostra contenitore setting al click dell'svg
+
+    document.body.setAttribute("style" , "overflow-y: hidden");
 
     if (settingAdattatoOn.matches) {
         contenitoreGeneraleSetting.setAttribute("style" , "top: 100%");
