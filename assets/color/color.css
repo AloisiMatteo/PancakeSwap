@@ -13,4 +13,9 @@
     --normal-text-color: #b8add2;
     --navbar-border-color: #383241;
     --downscroll-bg-onhover: #aa97d82d;
+    --theme-change-scroll: #666171;
+    --healt-indicator-scroll: #31d0aa;
+    --box-shadow-general: 0px 0px 2px rgba(0,0,0,.2),0px 4px 12px -8px rgba(14,14,44,.1);
+    --svg-scroll-color: #280d5f;
+    --adapted-setting-label: #383241;
 }

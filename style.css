@@ -26,10 +26,7 @@ body {
     visibility: visible;
     opacity: 0.6;
 }
-.offusca-schermo-off {
-    visibility: hidden;
-    opacity: 0;
-}
+
 /* Elementi scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -820,3 +817,232 @@ overflow: hidden;
 
 
 /* Inizio contenitore opzioni della navbar */
+.opzioni-normale-generale {
+    position: absolute;
+    top: 35%;
+    left: 39%;
+    align-items: center;
+    transition: 0.3s ease 0s;
+    background-color: var(--navbar-color);
+    border-radius: 32px;
+    overflow: hidden;
+    width: auto;
+    max-width: 100vh;
+    min-width: 320px;
+    min-height: 300px;
+    box-shadow: rgb(14 14 44 / 10%) 0px 20px 36px -8px, rgb(0 0 0 / 5%) 0px 1px 1px;
+    z-index: 20;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.opzioni-generale-on {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Inizio contenitore principale opzioni */
+.label-opzioni {
+    background-color: var(--navbar-extra-label-color);
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+    height: 73px;
+}
+
+.label-opzioni svg {
+    color: var(--button-bg-color);
+}
+
+.label-opzioni-destra svg {
+    cursor: pointer;
+}
+
+/* Inizio sezione GLOBAL del contenitore opzioni */
+
+.opzioni-normale-generale .label-global {
+    color: var(--title-text-color);
+    justify-content: flex-start;
+    width: 100%;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 18px;
+    padding: 24px 24px 20px 24px;
+}
+
+/* Inizio del contenitore per il cambio del tema */
+.opzioni-normale-generale .label-cambio-tema {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px 25px 24px;
+}
+
+.cambio-tema-destra {
+    justify-content: center;
+    cursor: pointer;
+    width: 56px;
+    height: 32px;
+    gap: 10px;
+    background-color: var(--theme-change-scroll);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+#tema-chiaro {
+    display: none;
+}
+
+.cambio-tema-destra svg {
+    fill: var(--navbar-color);
+}
+.cambio-tema-flag {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+    background-color: var(--theme-change-scroll);
+    border-radius: 50%;
+    width: 32px;
+    height: 31px;
+}
+
+.cambio-tema-flag svg {
+    fill: var(--title-text-color);
+    z-index: 5;
+}
+
+.cambio-tema-flag .bordo-flag {
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+}
+
+.cambio-tema-flag .bordo-flag-hover {
+    position: absolute;
+    background-color: var(--title-text-color);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.cambio-tema-destra:hover .bordo-flag-hover {
+    visibility: visible;
+}
+
+/* Inizio contentore per l'indicatore  */
+.label-healt-indicator {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 24px;
+}
+/* Inizio parte sinistra healt indicator */
+.healt-indicator-sinistra {
+    position: relative;
+}
+
+.healt-indicator-sinistra svg {
+    fill: var(--normal-text-color);
+    margin-left: 4px;
+}
+
+/* Contenitore svg per le informazioni */
+#contenitore-info-svg {
+    position: relative;
+}
+
+.healt-svg-scroll {
+    background-color: white;
+    position: absolute;
+    transition: 0.3s ease 0s;
+    padding: 16px;
+    font-size: 16px;
+    z-index: 101;
+    box-shadow: var(--box-shadow-general);
+    color: var(--svg-scroll-color);
+    max-width: 320px;
+    line-height: 130%;
+    border-radius: 16px;
+    visibility: hidden;
+    opacity: 0;
+    top: -121px;
+    right: -76px;
+}
+
+#information-svg:hover {
+    opacity: 0.5;
+}
+
+#information-svg:hover + div {
+    visibility: visible;
+    opacity: 1;
+}
+
+.healt-svg-scroll:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Inizio parte destra healt indicator */
+.healt-indicator-destra {
+    background-color: var(--healt-indicator-scroll);
+    align-items: center;
+    width: 56px;
+    height: 32px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.healt-indicator-flag {
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    right: 4px;
+    border-radius: 50%;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+.healt-indicator-destra .bordo-flag-hover {
+    position: absolute;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    border-radius: 50%;
+    background-color: var(--title-text-color);
+    visibility: hidden;
+}
+.healt-indicator-destra:hover .bordo-flag-hover {
+    visibility: visible;
+}
+
+/* Adattamento setting generale */
+@media screen and (max-width: 850px) {
+    .opzioni-normale-generale {
+        min-height: 320px;
+        bottom: 0px;
+        top: 100%;
+        left: auto;
+        width: 100%;
+    }
+    .label-opzioni {
+        background-color: var(--adapted-setting-label);
+    }
+}
