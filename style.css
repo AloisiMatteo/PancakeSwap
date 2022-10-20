@@ -438,7 +438,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 40px;
 }
 .navbar-right-side .item:hover svg {
     width: 28px;
@@ -449,7 +449,6 @@ body {
     display: flex;
     align-self: center;
     transition: 0.3s ease 0s;
-    margin-right: 8px;
 }
 
 .language-item svg, .setting-item svg {
@@ -633,6 +632,9 @@ body {
     }
     .bnb-smart-downscroll {
         left: -71px;
+    }
+    .navbar-right-side .item:first-child {
+        display: none;
     }
 }
 @media screen and (max-width: 970px) {
