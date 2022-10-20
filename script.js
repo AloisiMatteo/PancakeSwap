@@ -49,7 +49,7 @@ function spostaFlagSetting (contenitore, check, flag, bordoFlag) {
         if (check) {
             flag.setAttribute("style" , "left: 4px");
             bordoFlag.setAttribute("style" , "left: 1px");
-            contenitore.setAttribute("style" , "background-color: var(--theme-change-scroll)");
+            contenitore.setAttribute("style" , "background-color: var(--healt-off-bg)");
             check = false;
         } else {
             flag.setAttribute("style" , "right: 4px");

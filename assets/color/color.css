@@ -25,6 +25,7 @@
     --bg-offusca-schermo: white;
     --tema-flag-svg: #9a6aff;
     --bordo-flag-svg: black;
+    --healt-off-bg: #372f47;
 }
 [data-theme = "light"] {
     --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
@@ -53,4 +54,5 @@
     --bg-offusca-schermo: #280d5f99;
     --tema-flag-svg: #ffb237;
     --bordo-flag-svg: white;
+    --healt-off-bg: #eeeaf4;
 }

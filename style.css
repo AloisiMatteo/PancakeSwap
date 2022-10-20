@@ -1027,10 +1027,11 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: inset 0px 2px 2px -1px rgba(74,74,104,.1);
 }
 
 .healt-indicator-flag {
-    background-color: black;
+    background-color: var(--bordo-flag-svg);
     align-items: center;
     justify-content: center;
     right: 4px;
