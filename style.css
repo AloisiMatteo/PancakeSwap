@@ -18,7 +18,7 @@ body {
     visibility: hidden;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: var(--bg-offusca-schermo);
     opacity: 0;
     z-index: 10;
 }
@@ -131,6 +131,7 @@ body {
 }
 .phishing-second-container svg:hover {
     color: var(--phising-remember-text-color);
+    transition: 0.3s ease 0s;
 }
 
 /* Adattamento phishing */
@@ -166,6 +167,13 @@ body {
     gap: 5px;
 }
 
+.svg-tema-chiaro {
+    display: none;
+    cursor: pointer;
+    width: 161px;
+    margin-right: 16px;
+}
+
 .svg-normale {
     width: 161px;
     cursor: pointer;
@@ -173,6 +181,7 @@ body {
 }
 .svg-adattato {
     display: none;
+    cursor: pointer;
 }
 .navbar-left-side .dots-downscroll svg {
     fill: var(--normal-text-color);
@@ -480,7 +489,7 @@ overflow: hidden;
     width: max-content;
     position: absolute;
     padding: 16px;
-    color: white;
+    color: var(--colore-tema);
     background-color: var(--navbar-color);
 }
 .language-downscroll .item:hover {
@@ -511,13 +520,14 @@ overflow: hidden;
 
 .bnb-smart-container {
     align-items: center;
+    box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
     justify-content: center;
     height: 32px;
     padding-right: 8px;
     border-radius: 16px;
     background-color: var(--navbar-extra-label-color);
-    color: white;
-    fill: white;
+    color: var(--colore-tema);
+    fill: var(--colore-tema);
     cursor: pointer;
     font-weight: 600;
     gap: 6px;
@@ -593,6 +603,8 @@ overflow: hidden;
     padding: 0px 16px;
     height: 32px;
     opacity: 1;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    border: transparent;
 }
 .navbar-right-side button:hover {
     opacity: 0.65;
@@ -615,12 +627,9 @@ overflow: hidden;
     .bnb-smart-downscroll {
         left: -71px;
     }
-    .navbar-right-side .item:first-child {
-        display: none;
-    }
 }
 @media screen and (max-width: 970px) {
-    .svg-normale {
+    .svg-normale, .svg-tema-chiaro {
         display: none;
     }
     .svg-adattato {
@@ -855,6 +864,7 @@ overflow: hidden;
     font-weight: 600;
     line-height: 1.1;
     height: 73px;
+    color: var(--titolo-label-opzioni);
 }
 
 .label-opzioni svg {
@@ -883,6 +893,7 @@ overflow: hidden;
     justify-content: space-between;
     align-items: center;
     padding: 0px 24px 25px 24px;
+    color: var(--titolo-label-opzioni);
 }
 
 .cambio-tema-destra {
@@ -916,13 +927,13 @@ overflow: hidden;
 }
 
 .cambio-tema-flag svg {
-    fill: var(--title-text-color);
+    fill: var(--tema-flag-svg);
     z-index: 5;
 }
 
 .cambio-tema-flag .bordo-flag {
     position: absolute;
-    background-color: black;
+    background-color: var(--bordo-flag-svg);
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -950,6 +961,7 @@ overflow: hidden;
     align-items: center;
     width: 100%;
     padding: 0px 24px;
+    color: var(--titolo-label-opzioni);
 }
 /* Inizio parte sinistra healt indicator */
 .healt-indicator-sinistra {
@@ -967,14 +979,14 @@ overflow: hidden;
 }
 
 .healt-svg-scroll {
-    background-color: white;
+    background-color: var(--bg-upscroll-opzioni);
+    color: var(--text-color-upscroll-opzioni);
     position: absolute;
     transition: 0.3s ease 0s;
     padding: 16px;
     font-size: 16px;
     z-index: 101;
     box-shadow: var(--box-shadow-general);
-    color: var(--svg-scroll-color);
     max-width: 320px;
     line-height: 130%;
     border-radius: 16px;

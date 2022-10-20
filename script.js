@@ -6,6 +6,8 @@ let elementiNavAdattata = document.querySelectorAll("#elemento-nav-adattata");
 let listaUpscroll = document.querySelectorAll("#upscroll-list");
 let navbarSetting = document.querySelector("#nav-svg-setting");
 let contenitoreGeneraleSetting = document.querySelector(".opzioni-normale-generale");
+let navBarLogoChiaro = document.querySelector(".svg-tema-chiaro");
+let navBarLogoScuro = document.querySelector(".svg-tema-scuro");
 
 //Variabili per il flag healt del reparto opzioni
 let contenitoreBottoneHealt = document.querySelector(".healt-indicator-destra");
@@ -23,7 +25,8 @@ let svgTemaScuro = document.querySelector("#tema-scuro");
 
 
 //Variabili per la registrazione della grandezza dello schermo
-var settingAdattatoOn = window.matchMedia("(max-width: 850px)")
+var settingAdattatoOn = window.matchMedia("(max-width: 850px)");
+var navBarChangeOn = window.matchMedia("(max-width: 970px)");
 
 //Inizializzazione delle funzioni
 
@@ -77,10 +80,33 @@ function settingClose () {
         contenitoreGeneraleSetting.setAttribute("style" , "top: 100%");
     }
 }
+function cambiaTema() {
+
+    const temaAttuale = document.documentElement;
+
+    if (!navBarChangeOn.matches) {
+        if (temaAttuale.getAttribute("data-theme") == "dark") {
+        navBarLogoChiaro.setAttribute("style" , "display: block");
+        navBarLogoScuro.setAttribute("style" , "display: none");
+        } else {
+        navBarLogoChiaro.setAttribute("style" , "display: none");
+        navBarLogoScuro.setAttribute("style" , "display: block");
+        }
+    } else {
+        navBarLogoChiaro.setAttribute("style" , "display: none");
+        navBarLogoScuro.setAttribute("style" , "display: none");
+    }
+        
+    temaAttuale.getAttribute("data-theme") == "light" ?
+    temaAttuale.setAttribute("data-theme" , "dark") :
+    temaAttuale.setAttribute("data-theme" , "light");
+
+
+}
 
 //Inizializzazione degli eventi
 bottonePhishing.addEventListener("click", () => {
-    phishingGenerale.setAttribute("style", "visibility: hidden");
+    phishingGenerale.setAttribute("style", "display: none");
 });
 
 contenitoreBottoneTema.addEventListener("click" , () => {       //Sposta il flag al click del contenitore
@@ -122,3 +148,4 @@ navbarSetting.addEventListener("click" , () => {    //Mostra contenitore setting
 //Avvio programma
 navPriority();
 spostaFlagSetting(contenitoreBottoneHealt, healtCheck, healtFlag, bordoFlagHealt);
+

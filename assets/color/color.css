@@ -1,4 +1,4 @@
-:root {
+[data-theme = "dark"] {
     --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
     --adapted-phishing-color: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)), linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
     --phishing-warning-text-bg: rgba(39, 38, 44, 0.4);
@@ -18,4 +18,39 @@
     --box-shadow-general: 0px 0px 2px rgba(0,0,0,.2),0px 4px 12px -8px rgba(14,14,44,.1);
     --svg-scroll-color: #280d5f;
     --adapted-setting-label: #383241;
+    --colore-tema: white;
+    --titolo-label-opzioni: white;
+    --bg-upscroll-opzioni: white;
+    --text-color-upscroll-opzioni: #280d5f;
+    --bg-offusca-schermo: white;
+    --tema-flag-svg: #9a6aff;
+    --bordo-flag-svg: black;
+}
+[data-theme = "light"] {
+    --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+    --adapted-phishing-color: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)), linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+    --phishing-warning-text-bg: rgba(39, 38, 44, 0.4);
+    --phising-remember-text-color: rgb(189, 194, 196);
+    --navbar-color: white;
+    --subtitle-text-color: #b8add2;
+    --recent-update-color: #ffb237;
+    --navbar-extra-label-color: #eff4f5;
+    --button-bg-color: #1fc7d4;
+    --title-text-color: #9a6aff;
+    --graphic-theme-color: #ed4b9e;
+    --normal-text-color: #7a6eaa;
+    --navbar-border-color: #e7e3eb;
+    --downscroll-bg-onhover: rgb(25 119 179 / 8%);
+    --theme-change-scroll: #bdc2c4;
+    --healt-indicator-scroll: #31d0aa;
+    --box-shadow-general: 0px 0px 2px rgba(0,0,0,.2),0px 4px 12px -8px rgba(14,14,44,.1);
+    --svg-scroll-color: #280d5f;
+    --adapted-setting-label: rgb(25 119 179 / 8%);
+    --colore-tema: black;
+    --titolo-label-opzioni: #280d5f;
+    --bg-upscroll-opzioni: #27262c;
+    --text-color-upscroll-opzioni: white;
+    --bg-offusca-schermo: #280d5f99;
+    --tema-flag-svg: #ffb237;
+    --bordo-flag-svg: white;
 }
