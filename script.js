@@ -103,18 +103,9 @@ function cambiaTema() {
     temaAttuale.getAttribute("data-theme") == "light" ?
     temaAttuale.setAttribute("data-theme" , "dark") :
     temaAttuale.setAttribute("data-theme" , "light");
-
+    localStorage.setItem("ThemeRunningNow" , temaAttuale.getAttribute("data-theme"));
 
 }
-
-//Inizializzazione degli eventi
-bottonePhishing.addEventListener("click", () => {
-    let visualizzaPhishing = false 
-    localStorage.setItem('visualizzaBanner', JSON.stringify(visualizzaPhishing))
-    show()
-});
-
-
 function show(){
    let  checkBannerPhish = localStorage.getItem('visualizzaBanner')
     if (checkBannerPhish === 'false'){
@@ -122,8 +113,45 @@ function show(){
     }
 
 }
+function salvaTemaFlag () {
+    const controllo = localStorage.getItem("ThemeRunningNow");
+    if (controllo == "light") {
+        document.documentElement.setAttribute("data-theme" , "light");
+        temaFlag.setAttribute("style" , "left: 0px");
+        bordoFlagTema.setAttribute("style" , "left: 0px");
+        svgTemaChiaro.setAttribute("style" , "display: block");
+        svgTemaScuro.setAttribute("style" , "display: none");
+        temaCheck = false;
+        navBarLogoChiaro.classList.add("mostra-svg-navbar");
+        navBarLogoChiaro.classList.remove("nascondi-svg-navbar");
+        navBarLogoScuro.classList.add("nascondi-svg-navbar");
+        navBarLogoScuro.classList.remove("mostra-svg-navbar");
 
-show()
+    } else {
+        document.documentElement.setAttribute("data-theme" , "dark");
+        temaFlag.setAttribute("style" , "right: 0px");
+        bordoFlagTema.setAttribute("style" , "right: 0px");
+        svgTemaChiaro.setAttribute("style" , "display: none");
+        svgTemaScuro.setAttribute("style" , "display: block");
+        temaCheck = true;
+        navBarLogoChiaro.classList.add("nascondi-svg-navbar");
+        navBarLogoChiaro.classList.remove("mostra-svg-navbar");
+        navBarLogoScuro.classList.add("mostra-svg-navbar");
+        navBarLogoScuro.classList.remove("nascondi-svg-navbar");
+    }
+
+    if (navBarChangeOn.matches) {
+        navBarLogoChiaro.classList.add("nascondi-svg-navbar");
+        navBarLogoScuro.classList.add("nascondi-svg-navbar");
+    }
+
+}
+//Inizializzazione degli eventi
+bottonePhishing.addEventListener("click", () => {
+    let visualizzaPhishing = false 
+    localStorage.setItem('visualizzaBanner', JSON.stringify(visualizzaPhishing))
+    show()
+});
 
 contenitoreBottoneTema.addEventListener("click" , () => {       //Sposta il flag al click del contenitore
     if (temaCheck) {
@@ -139,6 +167,7 @@ contenitoreBottoneTema.addEventListener("click" , () => {       //Sposta il flag
         svgTemaScuro.setAttribute("style" , "display: block");
         temaCheck = true;
     }
+
 });
 
 navbarSetting.addEventListener("click" , () => {    //Mostra contenitore setting al click dell'svg
@@ -164,4 +193,5 @@ navbarSetting.addEventListener("click" , () => {    //Mostra contenitore setting
 //Avvio programma
 navPriority();
 spostaFlagSetting(contenitoreBottoneHealt, healtCheck, healtFlag, bordoFlagHealt);
-
+show();
+salvaTemaFlag();
