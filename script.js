@@ -83,20 +83,23 @@ function settingClose () {
 function cambiaTema() {
 
     const temaAttuale = document.documentElement;
-
-    if (!navBarChangeOn.matches) {
-        if (temaAttuale.getAttribute("data-theme") == "dark") {
-        navBarLogoChiaro.setAttribute("style" , "display: block");
-        navBarLogoScuro.setAttribute("style" , "display: none");
+    if (temaAttuale.getAttribute("data-theme") == "dark") {
+        navBarLogoChiaro.classList.add("mostra-svg-navbar");
+        navBarLogoChiaro.classList.remove("nascondi-svg-navbar");
+        navBarLogoScuro.classList.add("nascondi-svg-navbar");
+        navBarLogoScuro.classList.remove("mostra-svg-navbar");
         } else {
-        navBarLogoChiaro.setAttribute("style" , "display: none");
-        navBarLogoScuro.setAttribute("style" , "display: block");
+        navBarLogoChiaro.classList.add("nascondi-svg-navbar");
+        navBarLogoChiaro.classList.remove("mostra-svg-navbar");
+        navBarLogoScuro.classList.add("mostra-svg-navbar");
+        navBarLogoScuro.classList.remove("nascondi-svg-navbar");
         }
-    } else {
-        navBarLogoChiaro.setAttribute("style" , "display: none");
-        navBarLogoScuro.setAttribute("style" , "display: none");
+
+    if (navBarChangeOn.matches) {
+        navBarLogoChiaro.classList.add("nascondi-svg-navbar");
+        navBarLogoScuro.classList.add("nascondi-svg-navbar");
     }
-        
+
     temaAttuale.getAttribute("data-theme") == "light" ?
     temaAttuale.setAttribute("data-theme" , "dark") :
     temaAttuale.setAttribute("data-theme" , "light");

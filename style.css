@@ -183,6 +183,12 @@ body {
     display: none;
     cursor: pointer;
 }
+.nascondi-svg-navbar {
+    display: none;
+}
+.mostra-svg-navbar {
+    display: block;
+}
 .navbar-left-side .dots-downscroll svg {
     fill: var(--normal-text-color);
 }
@@ -646,6 +652,9 @@ body {
         width: 32px;
         height: 32px;
     }
+    .nascondi-svg-navbar, .mostra-svg-navbar {
+        display: none;
+    }
 
 }
 @media screen and (max-width: 600px) {
@@ -1061,8 +1070,9 @@ body {
 @media screen and (max-width: 850px) {
     .opzioni-normale-generale {
         min-height: 320px;
+        height: 100%;
+        top: 100%;
         bottom: 0px;
-        top: 103%;
         left: auto;
         width: 100%;
     }
