@@ -843,6 +843,61 @@ body {
         display: flex;
     }
 }
+/* Inizio adattamenti upscroll della navbar */
+@media screen and (max-width: 540px){
+    .dots-adattato-upscroll {
+        left: -424px;
+        width: 54vh;
+    }
+    .nft-adattato-upscroll {
+        left: -322px;
+        width: 54vh;
+    }
+    .win-adattato-upscroll {
+        left: -221px;
+        width: 54vh;
+    }
+    .earn-adattato-upscroll {
+        left: -133px;
+        width: 54vh;
+    }
+}
+@media screen and (max-width: 480px){
+    .dots-adattato-upscroll {
+        left: -325px;
+        width: 43vh;
+    }
+    .nft-adattato-upscroll {
+        left: -235px;
+        width: 43vh;
+    }
+    .win-adattato-upscroll {
+        left: -143px;
+        width: 43vh;
+    }
+    .earn-adattato-upscroll {
+        left: -116px;
+        width: 43vh;
+    }
+}
+@media screen and (max-width: 420px){
+    .dots-adattato-upscroll {
+        left: -196px;
+        width: 28vh;
+    }
+    .nft-adattato-upscroll {
+        left: -161px;
+        width: 28vh;
+    }
+    .win-adattato-upscroll {
+        left: -121px;
+        width: 28vh;
+    }
+    .earn-adattato-upscroll {
+        left: -80px;
+        width: 28vh;
+    }
+}
 
 
 /* Inizio contenitore opzioni della navbar */
