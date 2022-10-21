@@ -109,8 +109,21 @@ function cambiaTema() {
 
 //Inizializzazione degli eventi
 bottonePhishing.addEventListener("click", () => {
-    phishingGenerale.setAttribute("style", "display: none");
+    let visualizzaPhishing = false 
+    localStorage.setItem('visualizzaBanner', JSON.stringify(visualizzaPhishing))
+    show()
 });
+
+
+function show(){
+   let  checkBannerPhish = localStorage.getItem('visualizzaBanner')
+    if (checkBannerPhish === 'false'){
+        phishingGenerale.setAttribute('style', 'display: none')
+    }
+
+}
+
+show()
 
 contenitoreBottoneTema.addEventListener("click" , () => {       //Sposta il flag al click del contenitore
     if (temaCheck) {
