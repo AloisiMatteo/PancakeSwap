@@ -925,6 +925,14 @@ body {
     visibility: visible;
     opacity: 1;
 }
+@media screen and(max-width: 850px) {
+    .opzioni-adattato-top100 {
+        top: 100%;
+    }
+    .opzioni-adattato-top70 {
+        top: 70%;
+    }    
+}
 
 /* Inizio contenitore principale opzioni */
 .label-opzioni {
@@ -1126,7 +1134,7 @@ body {
     .opzioni-normale-generale {
         min-height: 320px;
         height: 100%;
-        top: 100%;
+        top: 70%;
         bottom: 0px;
         left: auto;
         width: 100%;

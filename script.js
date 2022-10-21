@@ -67,7 +67,8 @@ function settingPriority () {
         contenitoreGeneraleSetting.classList.remove("opzioni-generale-on");
 
         if (settingAdattatoOn.matches) {
-            contenitoreGeneraleSetting.setAttribute("style" , "top: 100%");
+            contenitoreGeneraleSetting.classList.remove("opzioni-adattato-top70");
+            contenitoreGeneraleSetting.classList.add("opzioni-adattato-top100");
         }
     });
 }
@@ -77,7 +78,8 @@ function settingClose () {
     offuscaSchermo.classList.remove("offusca-schermo-on");
 
     if (settingAdattatoOn.matches) {
-        contenitoreGeneraleSetting.setAttribute("style" , "top: 100%");
+        contenitoreGeneraleSetting.classList.add("opzioni-adattato-top70");
+        contenitoreGeneraleSetting.classList.remove("opzioni-adattato-top100");
     }
 }
 function cambiaTema() {
@@ -175,16 +177,19 @@ navbarSetting.addEventListener("click" , () => {    //Mostra contenitore setting
     document.body.setAttribute("style" , "overflow-y: hidden");
 
     if (settingAdattatoOn.matches) {
-        contenitoreGeneraleSetting.setAttribute("style" , "top: 100%");
+        contenitoreGeneraleSetting.classList.add("opzioni-adattato-top70");
+        contenitoreGeneraleSetting.classList.remove("opzioni-adattato-top100");
     } else {
-        contenitoreGeneraleSetting.setAttribute("style" , "top: 35%");
+        contenitoreGeneraleSetting.classList.remove("opzioni-adattato-top100");
+        contenitoreGeneraleSetting.classList.remove("opzioni-adattato-top70");
     }
 
     contenitoreGeneraleSetting.classList.add("opzioni-generale-on");
     settingPriority();
 
     if (settingAdattatoOn.matches) {
-        contenitoreGeneraleSetting.setAttribute("style" , "top: 70%");
+        contenitoreGeneraleSetting.classList.remove("opzioni-adattato-top100");
+        contenitoreGeneraleSetting.classList.add("opzioni-adattato-top70");
     }
 
 });
