@@ -1416,10 +1416,10 @@ body {
 }
 /* Inizio animazioni delle immagini */
 #animazione-coniglio-moon{
-	animation: animated-rabbit 2s ease infinite alternate;
+	animation: animated-rabbit 2s ease-in-out infinite alternate;
 }
 #animazione-stellina-moon {
-    animation: animated-star 2s ease infinite alternate;
+    animation: animated-star 1.5s ease infinite alternate;
 }
 
 .contenitore-moon-dx-immagini img {
