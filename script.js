@@ -9,6 +9,8 @@ let contenitoreGeneraleSetting = document.querySelector(".opzioni-normale-genera
 let navBarLogoChiaro = document.querySelector(".svg-tema-chiaro");
 let navBarLogoScuro = document.querySelector(".svg-tema-scuro");
 
+let contenitoreTimer = document.querySelectorAll("#timer-giorni");
+
 //Variabili per il flag healt del reparto opzioni
 let contenitoreBottoneHealt = document.querySelector(".healt-indicator-destra");
 let healtFlag = document.querySelector(".healt-indicator-flag");
@@ -148,6 +150,21 @@ function salvaTemaFlag () {
     }
 
 }
+function calcolaTimer () {
+    let oggi = new Date();
+    let dataStabilita = new Date("10/28/22");
+    let giorniRimanenti = Math.floor((dataStabilita - oggi) / (1000*60*60*24));
+    let oreRimanenti = (dataStabilita.getHours() + 24) - oggi.getHours();
+    let minutiRimanenti = (dataStabilita.getMinutes() + 60) - oggi.getMinutes();
+    let secondiRimanenti = (dataStabilita.getSeconds() + 60) - oggi.getSeconds();
+    if (minutiRimanenti > 0) oreRimanenti--;
+    console.log(giorniRimanenti + ": " + oreRimanenti + ": " + minutiRimanenti + ": " + secondiRimanenti);
+
+    contenitoreTimer[0].textContent = giorniRimanenti;
+    contenitoreTimer[1].textContent = oreRimanenti;
+    contenitoreTimer[2].textContent = minutiRimanenti;
+    contenitoreTimer[3].textContent = secondiRimanenti;
+}
 //Inizializzazione degli eventi
 bottonePhishing.addEventListener("click", () => {
     let visualizzaPhishing = false 
@@ -196,7 +213,23 @@ navbarSetting.addEventListener("click" , () => {    //Mostra contenitore setting
 
 
 //Avvio programma
+calcolaTimer(); //manda nella pagina il timer in modo immediato
 navPriority();
 spostaFlagSetting(contenitoreBottoneHealt, healtCheck, healtFlag, bordoFlagHealt);
 show();
 salvaTemaFlag();
+setInterval(function () { //mada nella pagina il timer ogni secondo
+    let oggi = new Date();
+    let dataStabilita = new Date("10/28/22");
+    let giorniRimanenti = Math.floor((dataStabilita - oggi) / (1000*60*60*24));
+    let oreRimanenti = (dataStabilita.getHours() + 24) - oggi.getHours();
+    let minutiRimanenti = (dataStabilita.getMinutes() + 60) - oggi.getMinutes();
+    let secondiRimanenti = (dataStabilita.getSeconds() + 60) - oggi.getSeconds();
+    if (minutiRimanenti > 0) oreRimanenti--;
+    console.log(giorniRimanenti + ": " + oreRimanenti + ": " + minutiRimanenti + ": " + secondiRimanenti);
+
+    contenitoreTimer[0].textContent = giorniRimanenti;
+    contenitoreTimer[1].textContent = oreRimanenti;
+    contenitoreTimer[2].textContent = minutiRimanenti;
+    contenitoreTimer[3].textContent = secondiRimanenti;
+}, 1000);

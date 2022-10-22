@@ -1,3 +1,7 @@
+:root {
+    --timer-container-background: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+}
+
 [data-theme = "dark"] {
     --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
     --adapted-phishing-color: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)), linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
@@ -26,6 +30,7 @@
     --tema-flag-svg: #9a6aff;
     --bordo-flag-svg: black;
     --healt-off-bg: #372f47;
+    --color-background: #191326;
 }
 [data-theme = "light"] {
     --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
@@ -55,4 +60,5 @@
     --tema-flag-svg: #ffb237;
     --bordo-flag-svg: white;
     --healt-off-bg: #eeeaf4;
+    --color-background: #79e4ff24;
 }
