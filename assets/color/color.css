@@ -31,6 +31,7 @@
     --bordo-flag-svg: black;
     --healt-off-bg: #372f47;
     --color-background: #191326;
+    --titolo-contenitore-moon: #9a6aff;
 }
 [data-theme = "light"] {
     --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
@@ -61,4 +62,5 @@
     --bordo-flag-svg: white;
     --healt-off-bg: #eeeaf4;
     --color-background: #79e4ff24;
+    --titolo-contenitore-moon: #7645d9;
 }
