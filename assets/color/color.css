@@ -32,6 +32,8 @@
     --healt-off-bg: #372f47;
     --color-background: #1c142b;
     --titolo-contenitore-moon: #9a6aff;
+    --bg-pancake-home2: linear-gradient(180deg,#09070c 22%,#201335 100%);
+    --colore-separatore-home2: #201335;
 }
 [data-theme = "light"] {
     --pancake-label-bg: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
@@ -39,7 +41,7 @@
     --phishing-warning-text-bg: rgba(39, 38, 44, 0.4);
     --phising-remember-text-color: rgb(189, 194, 196);
     --navbar-color: white;
-    --subtitle-text-color: #b8add2;
+    --subtitle-text-color: #7645d9;
     --recent-update-color: #ffb237;
     --navbar-extra-label-color: #eff4f5;
     --button-bg-color: #1fc7d4;
@@ -63,4 +65,6 @@
     --healt-off-bg: #eeeaf4;
     --color-background: #79e4ff24;
     --titolo-contenitore-moon: #7645d9;
+    --bg-pancake-home2: linear-gradient(180deg,#fff 22%,#d7caec 100%);
+    --colore-separatore-home2: #d8cbed;
 }

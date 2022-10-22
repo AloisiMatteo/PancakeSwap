@@ -1175,12 +1175,12 @@ body {
 .home1-separator-black {
     display: none;
     position: absolute;
-    bottom: 0px;
+    bottom: -1px;
 }
 .home1-separator-white {
     display: none;
     position: absolute;
-    bottom: 0px;
+    bottom: -1px;
 }
 
 .home-separator-on {
@@ -1452,4 +1452,127 @@ body {
     .contenitore-generale-moon {
         margin: 48px 0px;
     }
+}
+
+/* Inizio contenitore pancake-home2 */
+.pancake-home-secondo {
+    position: relative;
+    padding-top: 50px;
+    width: 100%;
+    align-items: center;
+    background: var(--bg-pancake-home2)
+}
+.pancake-home-secondo svg {
+    padding-bottom: 24px;
+}
+.pancake-home-secondo h2 {
+    font-size: 40px;
+    color: var(--titolo-label-opzioni);
+}
+.pancake-home-secondo .titolo-home2 + .titolo-home2 {
+    padding-bottom: 32px;
+}
+.pancake-home-secondo .sottotitolo-home2 + .sottotitolo-home2 {
+    padding-bottom: 20px;
+}
+.pancake-home-secondo .sottotitolo-home2 + .sottotitolo-home2 + .sottotitolo-home2 {
+    padding-bottom: 32px;
+    font-weight: bolder;
+}
+.pancake-home-secondo .sottotitolo-home2 {
+    color: var(--subtitle-text-color);
+    line-height: 1.5;
+}
+
+.pancake-home-secondo .separatore-home2 {
+    display: none; /* Da modificare in seguito */
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    fill: var(--colore-separatore-home2);
+}
+/* Inizio card pancake-home2 */
+.home2-card-general {
+    background-color: var(--navbar-color);
+    width: 280px;
+    width: 280px;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid var(--navbar-border-color);
+    border-bottom: 5px solid var(--navbar-border-color);
+}
+.home2-card-general .logo-card-home2 {
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+.pancake-home-secondo .item {
+    gap: 15px;
+}
+.pancake-home-secondo .svg-main-home2 {
+    width: 70px;
+    height: 70px;
+}
+.card-home2-users, .card-home2-trade, .card-home2-staked {
+    padding-bottom: 20px;
+}
+/* Inizio specifiche card users */
+.svg-interno-card-users {
+    fill: var(--title-text-color);
+}
+.home2-card-general .card-home2-users {
+    color: var(--title-text-color);
+}
+
+/* Inizio specifiche card trade */
+.svg-interno-card-trade {
+    fill: var(--button-bg-color);
+}
+.home2-card-general .card-home2-trade {
+    color: var(--button-bg-color);
+}
+
+/* Inizio specifiche card staked */
+.svg-interno-card-staked {
+    fill: var(--graphic-theme-color);
+}
+.home2-card-general .card-home2-staked {
+    color: var(--graphic-theme-color);
+}
+.titolo-card-home2-adattato {
+    display: none;
+}
+@media screen and (max-width: 890px) {
+    .pancake-home-secondo .item {
+        flex-direction: column;
+    }
+    .home2-card-general {
+        height: 166px;
+        width: 292px;
+        padding-top: 0px;
+    }
+    .card-home2-users, .card-home2-trade, .card-home2-staked {
+        padding-bottom: 0px;
+    }
+    .home2-card-general .titolo-card-home2 {
+        display: none;
+    }
+    .home2-card-general .logo-card-home2 {
+        padding-bottom: 0px;
+        padding-top: 20px;
+        justify-content: space-between;
+    }
+    .titolo-card-home2-adattato {
+        display: block;
+    }
+    .pancake-home-secondo h2 {
+        font-size: 32px;
+    }
+    .logo-card-home2 {
+        height: 60px;
+    }
+    .logo-card-home2 svg {
+        height: 62px;
+    }
+    
 }
