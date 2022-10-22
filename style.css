@@ -903,7 +903,7 @@ body {
 /* Inizio contenitore opzioni della navbar */
 .opzioni-normale-generale {
     position: absolute;
-    top: 50%;
+    top: 36%;
     left: 39%;
     align-items: center;
     transition: 0.3s ease 0s;
@@ -917,12 +917,12 @@ body {
     box-shadow: rgb(14 14 44 / 10%) 0px 20px 36px -8px, rgb(0 0 0 / 5%) 0px 1px 1px;
     z-index: 20;
     color: white;
-    visibility: hidden;
+    display: none;
     opacity: 0;
 }
 
 .opzioni-generale-on {
-    visibility: visible;
+    display: block;
     opacity: 1;
 }
 @media screen and(max-width: 850px) {
