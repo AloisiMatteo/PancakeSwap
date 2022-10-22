@@ -1197,9 +1197,15 @@ body {
     font-weight: bolder;
     margin-bottom: 16px;
     color: var(--recent-update-color);
+    padding-right: 10px;
 }
 #timer-giorni {
     font-size: 34px;
+}
+#acronimo-timer {
+    display: flex;
+    align-items: center;
+    height: 68%;
 }
 .contenitore-timer-sx .item:nth-child(2) span {
     font-size: 16px;
