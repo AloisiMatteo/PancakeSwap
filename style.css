@@ -1245,7 +1245,7 @@ body {
     height: 216px;
     position: absolute;
     right: 0px;
-    bottom: -1px;
+    bottom: -2px;
 }
 .contenitore-timer-dx img:nth-child(2) {
     display: none;
