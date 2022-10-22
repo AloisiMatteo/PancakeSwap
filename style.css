@@ -26,7 +26,17 @@ body {
     visibility: visible;
     opacity: 0.6;
 }
-
+/* Elementi keyframe */
+@keyframes animated-rabbit {
+    0% {
+        top: 0px;
+        right: 0px;
+    }
+    100% {
+        top: -10px;
+        right: 10px;
+    }
+}
 /* Elementi scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -1207,6 +1217,7 @@ body {
     align-items: center;
     height: 68%;
 }
+
 .contenitore-timer-sx .item:nth-child(2) span {
     font-size: 16px;
     margin: 0px 4px;
@@ -1394,6 +1405,10 @@ body {
     height: 100%;
     display: flex;
     justify-content: flex-end;
+}
+/* Inizio animazioni delle immagini */
+#animazione-coniglio-moon{
+	animation: animated-rabbit 2s ease infinite alternate;
 }
 
 .contenitore-moon-dx-immagini img {
