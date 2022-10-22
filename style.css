@@ -1342,6 +1342,7 @@ body {
 .contenitore-moon-sx .item:nth-child(2) {
     padding-top: 20px;
     font-size: 20px;
+    width: 591px;
     color: var(--colore-tema);
     font-weight: bolder;
 }
@@ -1398,10 +1399,10 @@ body {
 /* Adattamento contenitore moon */
 @media screen and (max-width: 1457px) {
     .contenitore-generale-moon {
-        margin: 48px 150px;
+        margin: 48px 120px;
     }
 }
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 1300px) {
     .contenitore-generale-moon {
         flex-wrap: wrap;
         flex-direction: column;
