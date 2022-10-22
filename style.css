@@ -1266,6 +1266,16 @@ body {
         margin: 48px 220px;
     }
 }
+@media screen and (max-width: 1390px) {
+    .contenitore-generale-timer {
+        margin: 48px 190px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .contenitore-generale-timer {
+        margin: 48px 160px;
+    }
+}
 @media screen and (max-width: 1186px) {
     .contenitore-generale-timer {
         margin: 48px 100px;
@@ -1317,7 +1327,7 @@ body {
 .contenitore-moon-sx .item:nth-child(2) {
     padding-top: 20px;
     font-size: 20px;
-    color: white;
+    color: var(--colore-tema);
     font-weight: bolder;
 }
 .contenitore-moon-sx .item:nth-child(3) {
