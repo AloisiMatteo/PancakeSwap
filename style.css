@@ -920,7 +920,7 @@ body {
 
 /* Inizio contenitore opzioni della navbar */
 .opzioni-normale-generale {
-    position: absolute;
+    position: fixed;
     top: 36%;
     left: 39%;
     align-items: center;
