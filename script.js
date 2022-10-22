@@ -158,7 +158,6 @@ function calcolaTimer () {
     let minutiRimanenti = (dataStabilita.getMinutes() + 60) - oggi.getMinutes();
     let secondiRimanenti = (dataStabilita.getSeconds() + 60) - oggi.getSeconds();
     if (minutiRimanenti > 0) oreRimanenti--;
-    console.log(giorniRimanenti + ": " + oreRimanenti + ": " + minutiRimanenti + ": " + secondiRimanenti);
 
     contenitoreTimer[0].textContent = giorniRimanenti;
     contenitoreTimer[1].textContent = oreRimanenti;
@@ -226,7 +225,6 @@ setInterval(function () { //mada nella pagina il timer ogni secondo
     let minutiRimanenti = (dataStabilita.getMinutes() + 60) - oggi.getMinutes();
     let secondiRimanenti = (dataStabilita.getSeconds() + 60) - oggi.getSeconds();
     if (minutiRimanenti > 0) oreRimanenti--;
-    console.log(giorniRimanenti + ": " + oreRimanenti + ": " + minutiRimanenti + ": " + secondiRimanenti);
 
     contenitoreTimer[0].textContent = giorniRimanenti;
     contenitoreTimer[1].textContent = oreRimanenti;
