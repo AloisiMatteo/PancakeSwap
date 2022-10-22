@@ -1154,9 +1154,19 @@ body {
     background-color: var(--color-background);
 }
 
-.pancake-home-primo .home1-separator {
+.home1-separator-black {
+    display: none;
     position: absolute;
     bottom: 0px;
+}
+.home1-separator-white {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+}
+
+.home-separator-on {
+    display: block;
 }
 
 /* Inizio contenitore timer generlae */

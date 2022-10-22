@@ -8,8 +8,9 @@ let navbarSetting = document.querySelector("#nav-svg-setting");
 let contenitoreGeneraleSetting = document.querySelector(".opzioni-normale-generale");
 let navBarLogoChiaro = document.querySelector(".svg-tema-chiaro");
 let navBarLogoScuro = document.querySelector(".svg-tema-scuro");
-
 let contenitoreTimer = document.querySelectorAll("#timer-giorni");
+let primoHomeSeparatorLight = document.querySelector(".home1-separator-white");
+let primoHomeSeparatorDark = document.querySelector(".home1-separator-black");
 
 //Variabili per il flag healt del reparto opzioni
 let contenitoreBottoneHealt = document.querySelector(".healt-indicator-destra");
@@ -92,11 +93,17 @@ function cambiaTema() {
         navBarLogoChiaro.classList.remove("nascondi-svg-navbar");
         navBarLogoScuro.classList.add("nascondi-svg-navbar");
         navBarLogoScuro.classList.remove("mostra-svg-navbar");
+
+        primoHomeSeparatorLight.classList.add("home-separator-on");
+        primoHomeSeparatorDark.classList.remove("home-separator-on");
         } else {
         navBarLogoChiaro.classList.add("nascondi-svg-navbar");
         navBarLogoChiaro.classList.remove("mostra-svg-navbar");
         navBarLogoScuro.classList.add("mostra-svg-navbar");
         navBarLogoScuro.classList.remove("nascondi-svg-navbar");
+
+        primoHomeSeparatorDark.classList.add("home-separator-on");
+        primoHomeSeparatorLight.classList.remove("home-separator-on");
         }
 
     if (navBarChangeOn.matches) {
@@ -131,6 +138,9 @@ function salvaTemaFlag () {
         navBarLogoScuro.classList.add("nascondi-svg-navbar");
         navBarLogoScuro.classList.remove("mostra-svg-navbar");
 
+        primoHomeSeparatorLight.classList.add("home-separator-on");
+        primoHomeSeparatorDark.classList.remove("home-separator-on");
+
     } else {
         document.documentElement.setAttribute("data-theme" , "dark");
         temaFlag.setAttribute("style" , "right: 0px");
@@ -142,6 +152,9 @@ function salvaTemaFlag () {
         navBarLogoChiaro.classList.remove("mostra-svg-navbar");
         navBarLogoScuro.classList.add("mostra-svg-navbar");
         navBarLogoScuro.classList.remove("nascondi-svg-navbar");
+
+        primoHomeSeparatorDark.classList.add("home-separator-on");
+        primoHomeSeparatorLight.classList.remove("home-separator-on");
     }
 
     if (navBarChangeOn.matches) {
