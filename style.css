@@ -1157,7 +1157,7 @@ body {
 .contenitore-generale-timer {
     position: relative;
     height: 200px;
-    margin: 48px 24px;
+    margin: 48px 28px;
     background-color: bisque;
     border-radius: 32px;
     background: var(--timer-container-background);
@@ -1238,7 +1238,37 @@ body {
     right: 0px;
     bottom: 0px;
 }
+/* Adattamento contenitore timer generale */
+@media screen and (min-width: 1355px) {
+    .contenitore-generale-timer {
+        margin: 48px 210px;
+    }
+}
+@media screen and (max-width: 1354px) {
+    .contenitore-generale-timer {
+        margin: 48px 110px;
+    }
+}
+@media screen and (max-width: 1186px) {
+    .contenitore-generale-timer {
+        margin: 48px 100px;
+    }
+}
+@media screen and (max-width: 1122px) {
+    .contenitore-generale-timer {
+        margin: 48px 60px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .contenitore-generale-timer {
+        margin: 48px 40px;
+    }
+}
+
 @media screen and (max-width: 970px) {
+    .contenitore-generale-timer {
+        margin: 48px 28px;
+    }
     .contenitore-timer-dx img:first-child {
         display: none;
     }
@@ -1246,4 +1276,24 @@ body {
         display: block;
     }
     
+}
+
+.contenitore-generale-moon {
+    margin: 48px 24px;
+    height: 550px;
+}
+.contenitore-moon-dx {
+    position: relative;
+    width: 100%;
+}
+.contenitore-moon-dx-immagini {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.contenitore-moon-dx-immagini img {
+    height: 100%;
+    position: absolute;
 }
