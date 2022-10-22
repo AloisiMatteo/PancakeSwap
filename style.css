@@ -1391,6 +1391,7 @@ body {
     .contenitore-generale-moon {
         flex-wrap: wrap;
         flex-direction: column;
+        margin: 48px 60px;
     }
     .contenitore-moon-sx {
         order: 2;
@@ -1398,5 +1399,10 @@ body {
     .contenitore-moon-dx {
         order: 1;
         height: 192px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .contenitore-generale-moon {
+        margin: 48px 0px;
     }
 }
