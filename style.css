@@ -1154,7 +1154,7 @@ body {
     background-color: var(--color-background);
 }
 
-.pancake-home-primo svg {
+.pancake-home-primo .home1-separator {
     position: absolute;
     bottom: 0px;
 }
