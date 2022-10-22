@@ -37,6 +37,14 @@ body {
         right: 10px;
     }
 }
+@keyframes animated-star {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
 /* Elementi scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -1409,6 +1417,9 @@ body {
 /* Inizio animazioni delle immagini */
 #animazione-coniglio-moon{
 	animation: animated-rabbit 2s ease infinite alternate;
+}
+#animazione-stellina-moon {
+    animation: animated-star 2s ease infinite alternate;
 }
 
 .contenitore-moon-dx-immagini img {
