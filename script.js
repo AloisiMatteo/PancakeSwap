@@ -12,6 +12,10 @@ let contenitoreTimer = document.querySelectorAll("#timer-giorni");
 let primoHomeSeparatorLight = document.querySelector(".home1-separator-white");
 let primoHomeSeparatorDark = document.querySelector(".home1-separator-black");
 
+//Variabili per lo spostamento della navabar
+let phishingNavContainer = document.querySelector(".phishing-navbar-container");
+let scrollAttuale = true;
+
 //Variabili per il flag healt del reparto opzioni
 let contenitoreBottoneHealt = document.querySelector(".healt-indicator-destra");
 let healtFlag = document.querySelector(".healt-indicator-flag");
@@ -197,6 +201,9 @@ function calcolaTimer () {
     contenitoreTimer[1].textContent = oreRimanenti;
     contenitoreTimer[2].textContent = minutiRimanenti;
     contenitoreTimer[3].textContent = secondiRimanenti;
+}
+function navbarSopra () {
+    
 }
 //Inizializzazione degli eventi
 bottonePhishing.addEventListener("click", () => {

@@ -86,7 +86,12 @@ body {
 .phishing-navbar-container {
     position: fixed;
     width: 100%;
+    transition: 0.3s ease 0s;
     z-index: 9;
+}
+
+.phishing-navbar-container-off {
+    top: -200px;
 }
 
 /* Inizio container PHISHING */
