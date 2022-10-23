@@ -26,6 +26,13 @@ let temaCheck = true;
 let svgTemaChiaro = document.querySelector("#tema-chiaro");
 let svgTemaScuro = document.querySelector("#tema-scuro");
 
+//Variabili per il flag cambio tema del footer
+let contenitoreBottoneTemaFooter = document.querySelector(".cambio-tema-footer");
+let temaFlagFooter = document.querySelector(".cambio-tema-flag-footer");
+let bordoFlagTemaFooter = document.querySelector("#bordo-tema-indicator-footer");
+let svgTemaChiaroFooter = document.querySelector("#tema-chiaro-footer");
+let svgTemaScuroFooter = document.querySelector("#tema-scuro-footer");
+
 
 //Variabili per la registrazione della grandezza dello schermo
 var settingAdattatoOn = window.matchMedia("(max-width: 850px)");
@@ -128,10 +135,17 @@ function salvaTemaFlag () {
     const controllo = localStorage.getItem("ThemeRunningNow");
     if (controllo == "light") {
         document.documentElement.setAttribute("data-theme" , "light");
+        //Variabili opzioni
         temaFlag.setAttribute("style" , "left: 0px");
         bordoFlagTema.setAttribute("style" , "left: 0px");
         svgTemaChiaro.setAttribute("style" , "display: block");
         svgTemaScuro.setAttribute("style" , "display: none");
+        //Variabili footer
+        temaFlagFooter.setAttribute("style" , "left: 0px");
+        bordoFlagTemaFooter.setAttribute("style" , "left: 0px");
+        svgTemaChiaroFooter.setAttribute("style" , "display: block");
+        svgTemaScuroFooter.setAttribute("style" , "display: none");
+
         temaCheck = false;
         navBarLogoChiaro.classList.add("mostra-svg-navbar");
         navBarLogoChiaro.classList.remove("nascondi-svg-navbar");
@@ -143,10 +157,17 @@ function salvaTemaFlag () {
 
     } else {
         document.documentElement.setAttribute("data-theme" , "dark");
+        //Variabili opzioni
         temaFlag.setAttribute("style" , "right: 0px");
         bordoFlagTema.setAttribute("style" , "right: 0px");
         svgTemaChiaro.setAttribute("style" , "display: none");
         svgTemaScuro.setAttribute("style" , "display: block");
+        //Variabili footer
+        temaFlagFooter.setAttribute("style" , "right: 0px");
+        bordoFlagTemaFooter.setAttribute("style" , "right: 0px");
+        svgTemaChiaroFooter.setAttribute("style" , "display: none");
+        svgTemaScuroFooter.setAttribute("style" , "display: block");
+
         temaCheck = true;
         navBarLogoChiaro.classList.add("nascondi-svg-navbar");
         navBarLogoChiaro.classList.remove("mostra-svg-navbar");
@@ -186,16 +207,30 @@ bottonePhishing.addEventListener("click", () => {
 
 contenitoreBottoneTema.addEventListener("click" , () => {       //Sposta il flag al click del contenitore
     if (temaCheck) {
+        //Variabili opzioni
         temaFlag.setAttribute("style" , "left: 0px");
         bordoFlagTema.setAttribute("style" , "left: 0px");
         svgTemaChiaro.setAttribute("style" , "display: block");
         svgTemaScuro.setAttribute("style" , "display: none");
+
+        //Variabili footer
+        temaFlagFooter.setAttribute("style" , "left: 0px");
+        bordoFlagTemaFooter.setAttribute("style" , "left: 0px");
+        svgTemaChiaroFooter.setAttribute("style" , "display: block");
+        svgTemaScuroFooter.setAttribute("style" , "display: none");
         temaCheck = false;
     } else {
+        //Variabili opzioni
         temaFlag.setAttribute("style" , "right: 0px");
         bordoFlagTema.setAttribute("style" , "right: 0px");
         svgTemaChiaro.setAttribute("style" , "display: none");
         svgTemaScuro.setAttribute("style" , "display: block");
+
+        //Variabili footer
+        temaFlagFooter.setAttribute("style" , "right: 0px");
+        bordoFlagTemaFooter.setAttribute("style" , "right: 0px");
+        svgTemaChiaroFooter.setAttribute("style" , "display: none");
+        svgTemaScuroFooter.setAttribute("style" , "display: block");
         temaCheck = true;
     }
 
@@ -221,6 +256,37 @@ navbarSetting.addEventListener("click" , () => {    //Mostra contenitore setting
         contenitoreGeneraleSetting.classList.add("opzioni-adattato-top70");
     }
 
+});
+
+contenitoreBottoneTemaFooter.addEventListener("click" , () => {
+
+    if (temaCheck) {
+        //Variabili opzioni
+        temaFlag.setAttribute("style" , "left: 0px");
+        bordoFlagTema.setAttribute("style" , "left: 0px");
+        svgTemaChiaro.setAttribute("style" , "display: block");
+        svgTemaScuro.setAttribute("style" , "display: none");
+
+        //Variabili footer
+        temaFlagFooter.setAttribute("style" , "left: 0px");
+        bordoFlagTemaFooter.setAttribute("style" , "left: 0px");
+        svgTemaChiaroFooter.setAttribute("style" , "display: block");
+        svgTemaScuroFooter.setAttribute("style" , "display: none");
+        temaCheck = false;
+    } else {
+        //Variabili opzioni
+        temaFlag.setAttribute("style" , "right: 0px");
+        bordoFlagTema.setAttribute("style" , "right: 0px");
+        svgTemaChiaro.setAttribute("style" , "display: none");
+        svgTemaScuro.setAttribute("style" , "display: block");
+
+        //Variabili footer
+        temaFlagFooter.setAttribute("style" , "right: 0px");
+        bordoFlagTemaFooter.setAttribute("style" , "right: 0px");
+        svgTemaChiaroFooter.setAttribute("style" , "display: none");
+        svgTemaScuroFooter.setAttribute("style" , "display: block");
+        temaCheck = true;
+    }
 });
 
 
