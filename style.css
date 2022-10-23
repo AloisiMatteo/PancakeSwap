@@ -1699,6 +1699,115 @@ body {
     }
 }
 
+/* Inizio del footer */
+.pancake-footer-generale {
+    flex-wrap: wrap;
+    background-color: #27262c;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 70px;
+}
+
+/* Inizio footer-top */
+.pancake-footer-top {
+    order: 1;
+    justify-content: space-between;
+    width: 87%;
+}
+.pancake-footer-top .item {
+    color: white;
+}
+.pancake-footer-top .item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.titolo-footer {
+    gap: 15px;
+    color: #9a6aff;
+    font-weight: bolder;
+}
+.footer-top-about span {
+    background-color: white;
+    margin: 6px 0px;
+    display: flex;
+    align-items: center;
+    width: 13px;
+    height: 1px;
+}
+.pancake-footer-top .new-item {
+    color: #ffb237;
+}
+
+/* Inizio footer-center */
+.pancake-footer-center {
+    margin-top: 72px;
+    order: 2;
+    width: 87%;
+    padding-bottom: 30px;
+    gap: 24px;
+    fill: #b8add2;
+    color: #b8add2;
+}
+.pancake-footer-center svg:hover {
+    cursor: pointer;
+}
+
+/* Inizio footer-bottom */
+.pancake-footer-bottom {
+    order: 3;
+    color: #b8add2;
+    fill: #b8add2;
+    width: 87%;
+    border-top: 1px solid #b8add224;
+    padding: 30px 0px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-bottom-sx, .footer-bottom-dx {
+    gap: 24px;
+}
+.footer-bottom-dx .item{
+    align-items: center;
+}
+.footer-bottom-dx span {
+    font-weight: bolder;
+}
+
+.footer-bottom-dx .item .svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+.footer-bottom-dx .item:hover svg {
+    cursor: pointer;
+    transition: 0.3s ease 0s;
+    width: 30px;
+    height: 30px;
+}
+.footer-bottom-dx button {
+    display: flex;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    transition: 0.2s ease 0s;
+    height: 32px;
+    padding: 0px 16px;
+    background-color: var(--button-bg-color);
+    font-weight: bolder;
+    color: white;
+    fill: white;
+    gap: 5px;
+}
+.footer-bottom-dx button:hover {
+    opacity: 0.7;
+}
 /* Inizio cambio tema del footer */
 .cambio-tema-footer {
     justify-content: center;
@@ -1752,6 +1861,104 @@ body {
     visibility: hidden;
 }
 
-.cambio-tema-footer:hover .bordo-flag-hover-footer {
+/* Inizio upscroll del contenitore language nel footer */
+.language-footer-dimension:hover + div {
     visibility: visible;
+}
+
+.language-item-footer {
+    position: relative;
+    align-items: center;
+    gap: 6px;
+}
+.language-footer-dimension {
+    position: absolute;
+    top: -17px;
+    width: 100%;
+    height: 149%;
+}
+
+.language-footer-upscroll {
+    max-height: 363px;
+    overflow-y: scroll;
+    position: absolute;
+    background-color: #27262c;
+    visibility: hidden;
+    bottom: 40px;
+    left: -50px;
+    width: 164px;
+    color: white;
+    gap: 8px;
+    font-weight: bolder;
+    align-items: center;
+    transition: 0.3s ease 0s;
+    opacity: 0;
+}
+.language-item-footer:hover .language-footer-upscroll {
+    visibility: visible;
+    opacity: 1;
+}
+
+.language-footer-upscroll .item:hover {
+    transition: 0.3s ease 0s;
+    opacity: 0.5;
+    cursor: pointer;
+}
+/* Adattamento footer */
+.svg-footer-adattato {
+    display: none;
+    height: 36px;
+}
+.last-span-footer {
+    display: none;
+    width: 95%;
+    height: 1px;
+    background-color: #b8add224;
+}
+@media screen and (max-width: 680px) {
+    .svg-footer-adattato {
+        display: block;
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+    .pancake-footer-generale {
+        align-items: flex-start;
+        padding-right: 0px;
+    }
+    .pancake-footer-bottom {
+        order: 1;
+        width: 95%;
+        flex-direction: column;
+        padding: 20px 0px;
+        margin-left: 15px;
+        align-items: flex-start;
+        gap: 30px;
+        border-bottom: 1px solid #b8add224;
+        margin-bottom: 20px;
+    }
+    .pancake-footer-top {
+        order: 2;
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 15px;
+    }
+    .footer-bottom-sx {
+        order: 2;
+    }
+    .footer-bottom-dx .item .svg-container svg {
+        background: #00ffffdb;
+        border-radius: 50%;
+    }
+    .footer-top-logo {
+        display: none;
+    }
+    .pancake-footer-center {
+        padding-left: 15px;
+    }
+    .last-span-footer {
+        display: flex;
+        order: 4;
+        margin-bottom: 40px;
+        margin-left: 15px;
+    }
 }
