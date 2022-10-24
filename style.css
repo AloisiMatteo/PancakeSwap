@@ -81,16 +81,17 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 /* Inizio contenitore phishing e navbar */
 .phishing-navbar-container {
     position: fixed;
     width: 100%;
+    top: 0px;
     transition: 0.3s ease 0s;
     z-index: 9;
 }
 
 .phishing-navbar-container-off {
+    transition: 0.3s ease 0s;
     top: -200px;
 }
 

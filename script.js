@@ -14,7 +14,7 @@ let primoHomeSeparatorDark = document.querySelector(".home1-separator-black");
 
 //Variabili per lo spostamento della navabar
 let phishingNavContainer = document.querySelector(".phishing-navbar-container");
-let scrollAttuale = true;
+let scrollAttuale = Math.round(window.scrollY);
 
 //Variabili per il flag healt del reparto opzioni
 let contenitoreBottoneHealt = document.querySelector(".healt-indicator-destra");
@@ -203,7 +203,11 @@ function calcolaTimer () {
     contenitoreTimer[3].textContent = secondiRimanenti;
 }
 function navbarSopra () {
-    
+    if (Math.round(window.scrollY >= 100)) {
+        if (window.scrollY > scrollAttuale) { phishingNavContainer.classList.add("phishing-navbar-container-off"); }
+        else { phishingNavContainer.classList.remove("phishing-navbar-container-off"); }
+    }
+    scrollAttuale = window.scrollY;
 }
 //Inizializzazione degli eventi
 bottonePhishing.addEventListener("click", () => {
