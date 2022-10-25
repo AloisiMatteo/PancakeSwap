@@ -1839,7 +1839,8 @@ body {
     position: absolute;
     align-items: center;
     justify-content: center;
-    right: 0px;
+    transition: 0.3s ease 0s;
+    left: 24px;
     background-color: #666171;
     border-radius: 50%;
     width: 32px;
@@ -1869,6 +1870,9 @@ body {
     opacity: 0.5;
     z-index: 1;
     visibility: hidden;
+}
+.cambio-tema-flag-footer:hover .bordo-flag-hover-footer {
+    visibility: visible;
 }
 
 /* Inizio upscroll del contenitore language nel footer */
