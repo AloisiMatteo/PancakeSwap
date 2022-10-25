@@ -1041,6 +1041,8 @@ body {
     align-items: center;
     justify-content: center;
     right: 0px;
+    left: 24px;
+    transition: 0.3s ease 0s;
     background-color: var(--theme-change-scroll);
     border-radius: 50%;
     width: 32px;
@@ -1148,7 +1150,8 @@ body {
     background-color: var(--bordo-flag-svg);
     align-items: center;
     justify-content: center;
-    right: 4px;
+    left: 27px;
+    transition: 0.3s ease 0s;
     border-radius: 50%;
     position: absolute;
     width: 25px;
@@ -1157,7 +1160,8 @@ body {
 
 .healt-indicator-destra .bordo-flag-hover {
     position: absolute;
-    right: 0px;
+    left: 25px;
+    transition: 0.3s ease 0s;
     width: 32px;
     height: 32px;
     opacity: 0.8;
