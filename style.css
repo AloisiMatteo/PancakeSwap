@@ -1467,6 +1467,8 @@ body {
         margin: 48px 60px;
     }
     .contenitore-moon-sx {
+        max-width: 100%;
+        overflow: hidden;
         order: 2;
     }
     .contenitore-moon-dx {
