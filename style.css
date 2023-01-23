@@ -1440,6 +1440,20 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 750px) {
+    .contenitore-moon-sx {
+        padding-top: 25px;
+    }
+    .contenitore-moon-sx .item:first-child {
+        font-size: 20px;
+    }
+    .contenitore-moon-sx .item:nth-child(2) {
+        max-width: 90%;
+        font-size: 20px;
+    }
+    
+}
 /* Inizio animazioni delle immagini */
 #animazione-coniglio-moon{
 	animation: animated-rabbit 2s ease-in-out infinite alternate;
@@ -1518,6 +1532,12 @@ body {
     height: 100px;
     bottom: -100px;
     fill: var(--colore-separatore-home2);
+}
+
+@media screen and (max-width: 390px) {
+    .pancake-home-secondo .separatore-home2 {
+        width: 100%;
+    }
 }
 /* Inizio card pancake-home2 */
 .home2-card-general {
